@@ -2345,6 +2345,7 @@ function CV2QX(cnt) {
       ohost = "obfs-host=" + cnt["ws-headers"]["Host"]
       ouri = "obfs-uri=" + cnt["ws-path"]
   } else if (cnt["ws-opts"]) { // New Clash Config
+        alert(cnt["ws-opts"]["headers"])
       ohost = "obfs-host=" + cnt["ws-opts"]["headers"]["Host"]
       ouri = "obfs-uri=" + cnt["ws-opts"]["path"]
   } else {
