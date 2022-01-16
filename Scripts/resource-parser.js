@@ -2248,8 +2248,8 @@ function Clash2QX(cnt) {
     aa = aa.replace(new RegExp(patn[4][i], "gmi"),patn[0][i])
   }
   var bb = JSON.parse(aa).proxies
-  //$notify("YAML Parse", "content", JSON.stringify(bb))
-  //console.log(bb)
+  $notify("YAML Parse", "content", JSON.stringify(bb))
+  console.log(bb)
   var nl = bb.length
   var nodelist=[]
   var node=""
@@ -2344,8 +2344,8 @@ function CV2QX(cnt) {
   if (cnt["ws-headers"]) {
       ohost = "obfs-host=" + cnt["ws-headers"]["Host"]
       ouri = "obfs-uri=" + cnt["ws-path"]
-  } else if (cnt["ws-opts"]) { // New Clash Config
-        console.log(cnt["ws-opts"]["headers"])
+  } else if (cnt["ws-opts"]) {
+       // New Clash Config
       ohost = "obfs-host=" + cnt["ws-opts"]["headers"]["Host"]
       ouri = "obfs-uri=" + cnt["ws-opts"]["path"]
   } else {
